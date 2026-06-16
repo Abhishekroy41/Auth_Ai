@@ -51,9 +51,39 @@ export default function Navbar() {
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled || open
           ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100'
-          : 'bg-transparent border-b border-transparent'
+          : 'bg-white/80 backdrop-blur-sm border-b border-transparent'
       }`}
     >
+      <style>
+        {`
+          @keyframes slide-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+          .animate-text-glow {
+            background-size: 200% auto;
+            animation: slide-gradient 3s linear infinite;
+          }
+        `}
+      </style>
+      {/* Announcement Bar */}
+      <div className="bg-[#eef2ff] border-b border-[#e0e7ff] text-[#4f46e5] px-4 py-2.5 text-sm font-medium text-center relative overflow-hidden flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+        <span className="relative flex h-2.5 w-2.5 shrink-0">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6366f1] opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#4f46e5]"></span>
+        </span>
+        <span className="font-bold tracking-wide uppercase text-[10px] sm:text-xs px-2 py-0.5 bg-white rounded-md shadow-sm text-[#4338ca]">
+          New Release
+        </span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-pink-500 to-indigo-600 animate-text-glow font-bold text-xs sm:text-sm drop-shadow-sm tracking-wide">
+          Deploy WhatsApp AI agents that capture, qualify & convert leads 24/7.
+        </span>
+        <a href="#services" className="font-bold underline decoration-2 underline-offset-2 hover:text-[#3730a3] transition-colors text-xs sm:text-sm ml-1">
+          Explore Features &rarr;
+        </a>
+      </div>
+
       <div className="site-container">
         <div className="flex items-center h-16 gap-3">
           <a href="#home" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
