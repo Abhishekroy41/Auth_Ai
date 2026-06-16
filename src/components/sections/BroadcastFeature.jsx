@@ -65,7 +65,7 @@ export default function BroadcastFeature() {
             
             {/* The Image Container */}
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-auto sm:h-[600px] flex items-center justify-center">
-               <img src="/Images/template_demo.png" alt="Auth AI Chat Mockup" className="w-full h-full object-contain drop-shadow-2xl" />
+               <img src={`${import.meta.env.BASE_URL}Images/template_demo.png`} alt="Auth AI Chat Mockup" className="w-full h-full object-contain drop-shadow-2xl" />
             </div>
             
 

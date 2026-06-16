@@ -17,7 +17,7 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-slate-400 mb-4">
               {SITE.tagline}
             </p>
-            <img src="/Images/meta-partner.png" alt="Meta Business Partner" className="h-16 opacity-90 hover:opacity-100 transition-opacity mix-blend-screen invert grayscale brightness-200" />
+            <img src={`${import.meta.env.BASE_URL}Images/meta-partner.png`} alt="Meta Business Partner" className="h-16 opacity-90 hover:opacity-100 transition-opacity mix-blend-screen invert grayscale brightness-200" />
           </div>
 
           {/* Links */}

@@ -123,7 +123,7 @@ export default function UseCases() {
               {/* Main Dashboard Image */}
               <div className="relative w-full rounded-xl overflow-hidden shadow-xl border border-white/40 mb-12 sm:mb-8 transition-transform duration-500 hover:scale-[1.02]">
                 <img 
-                  src="/Images/authai_dashboard.png" 
+                  src={`${import.meta.env.BASE_URL}Images/authai_dashboard.png`} 
                   alt="Auth AI Dashboard" 
                   className="w-full h-auto object-cover"
                 />
@@ -132,7 +132,7 @@ export default function UseCases() {
               {/* Floating Secondary Image */}
               <div className="absolute -bottom-4 -right-2 sm:-bottom-8 sm:-right-8 w-3/4 sm:w-3/5 shadow-2xl rounded-xl overflow-hidden border-4 border-white transform rotate-3 hover:rotate-0 hover:-translate-y-2 hover:-translate-x-2 transition-all duration-500 bg-white z-10">
                 <img 
-                  src="/Images/authai_dashboard1.png" 
+                  src={`${import.meta.env.BASE_URL}Images/authai_dashboard1.png`} 
                   alt="Auth AI Interface Detail" 
                   className="w-full h-auto object-cover"
                 />
