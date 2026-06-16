@@ -64,8 +64,18 @@ export default function BroadcastFeature() {
             <div className="absolute top-10 right-0 bottom-0 left-10 bg-gradient-to-b from-[#00e676]/20 to-white rounded-3xl -z-10"></div>
             
             {/* The Image Container */}
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-auto sm:h-[600px] flex items-center justify-center">
-               <img src={`${import.meta.env.BASE_URL}Images/template_demo.png`} alt="Auth AI Chat Mockup" className="w-full h-full object-contain drop-shadow-2xl" />
+            <div className="relative rounded-2xl w-full h-[400px] sm:h-[600px] mt-8 lg:mt-0">
+               {/* Main Background Image - slightly offset to the top-right */}
+               <div className="absolute top-0 right-0 w-[85%] sm:w-[80%] h-full flex justify-end items-start z-10">
+                 <img src={`${import.meta.env.BASE_URL}outer-home/bg-11.png`} alt="Auth AI Chat Mockup" className="w-full h-auto object-contain drop-shadow-2xl rounded-xl" />
+               </div>
+               
+               {/* Floating Overlap Image - anchored to bottom-left to balance the composition */}
+               <div className="absolute bottom-0 left-0 w-[60%] sm:w-[50%] z-20">
+                 <div className="relative group">
+                   <img src={`${import.meta.env.BASE_URL}outer-home/campaign-man.png`} alt="Campaign Manager" className="w-full h-auto object-contain drop-shadow-2xl filter contrast-105 transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-4" />
+                 </div>
+               </div>
             </div>
             
 

@@ -3,6 +3,7 @@ import { useScrollReveal } from './hooks/useScrollReveal'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 import UseCases from './components/sections/UseCases'
+import N8nSection from './components/n8n/N8nSection'
 import BroadcastFeature from './components/sections/BroadcastFeature'
 import Why from './components/sections/Why'
 import Services from './components/sections/Services'
@@ -25,6 +26,7 @@ export default function App() {
         <Why />
         <BroadcastFeature />
         <UseCases />
+        <N8nSection />
         <Services />
         <Industries />
         <Process />
