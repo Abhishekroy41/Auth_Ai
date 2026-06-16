@@ -14,7 +14,7 @@ export default function Contact() {
   const waHref = `https://wa.me/${SITE.whatsapp}?text=Hi%20AUTH%20AI%2C%20I%27d%20like%20to%20get%20started`
 
   return (
-    <section id="contact" className="section-block bg-slate-50">
+    <section id="contact" className="section-block bg-indigo-50/30">
       <div className="site-container site-container--narrow">
         <div className="reveal bg-white border border-slate-100 rounded-3xl shadow-sm p-8 sm:p-12 lg:p-14 text-center">
           <Eyebrow center>Get Started</Eyebrow>

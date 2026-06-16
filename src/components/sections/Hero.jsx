@@ -103,7 +103,18 @@ export default function Hero() {
                 <Icon name="message-square" className="w-5 h-5" />
                 Chat on WhatsApp
               </Button>
-              <Button href="#services" variant="outline" size="lg" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-slate-700 bg-white shadow-sm border-slate-200 hover:bg-slate-50 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+              <Button 
+                href={SITE.wadeskUrl} 
+                target="_blank"
+                rel="noopener noreferrer"
+                size="lg" 
+                className="group relative overflow-hidden w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white bg-slate-900 shadow-lg shadow-slate-900/20 hover:shadow-xl hover:shadow-slate-900/40 hover:-translate-y-1 transition-all duration-300 border-none flex items-center gap-2 justify-center"
+              >
+                <span className="absolute inset-0 w-[150%] h-full -translate-x-[120%] group-hover:translate-x-[120%] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out z-0 pointer-events-none skew-x-12"></span>
+                <Icon name="external-link" className="w-5 h-5 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="relative z-10 group-hover:tracking-wider transition-all duration-300">Login to WA CRM</span>
+              </Button>
+              <Button href="#services" variant="outline" size="lg" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-slate-700 bg-white shadow-sm border-slate-200 hover:bg-slate-50 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-center justify-center">
                 See all services
               </Button>
             </div>

@@ -115,7 +115,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors whitespace-nowrap"
             >
-              Register Now
+              Login to WA CRM
             </a>
             <a
               href={waHref}
@@ -163,7 +163,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors"
               >
-                Register Now ↗
+                Login to WA CRM ↗
               </a>
               <a
                 href={waHref}
