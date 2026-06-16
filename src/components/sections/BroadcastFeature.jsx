@@ -67,13 +67,13 @@ export default function BroadcastFeature() {
             <div className="relative rounded-2xl w-full h-[400px] sm:h-[600px] mt-8 lg:mt-0">
                {/* Main Background Image - slightly offset to the top-right */}
                <div className="absolute top-0 right-0 w-[85%] sm:w-[80%] h-full flex justify-end items-start z-10">
-                 <img src={`${import.meta.env.BASE_URL}outer-home/bg-11.png`} alt="Auth AI Chat Mockup" className="w-full h-auto object-contain drop-shadow-2xl rounded-xl" />
+                 <img src={`${import.meta.env.BASE_URL}outer-home/Gemini_Generated_Image_6vvuav6vvuav6vvu.png`} alt="Auth AI Chat Mockup" className="w-full h-auto object-contain drop-shadow-2xl rounded-xl" />
                </div>
                
                {/* Floating Overlap Image - anchored to bottom-left to balance the composition */}
                <div className="absolute bottom-0 left-0 w-[60%] sm:w-[50%] z-20">
                  <div className="relative group">
-                   <img src={`${import.meta.env.BASE_URL}outer-home/campaign-man.png`} alt="Campaign Manager" className="w-full h-auto object-contain drop-shadow-2xl filter contrast-105 transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-4" />
+                   <img src={`${import.meta.env.BASE_URL}outer-home/Gemini_Generated_Image_c9hj4xc9hj4xc9hj.png`} alt="Campaign Manager" className="w-full h-auto object-contain drop-shadow-2xl filter contrast-105 transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-4" />
                  </div>
                </div>
             </div>
