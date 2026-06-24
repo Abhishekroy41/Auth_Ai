@@ -14,28 +14,39 @@ import Testimonials from './components/sections/Testimonials'
 import FAQ from './components/sections/FAQ'
 import About from './components/sections/About'
 import Contact from './components/sections/Contact'
+import CCTVSecurityPopup from './components/CCTVSecurityPopup'
+import CCTVSecurityPage from './components/sections/CCTVSecurityPage'
+import { useState } from 'react'
 
 export default function App() {
   useScrollReveal()
+  const [showCCTVPage, setShowCCTVPage] = useState(false)
 
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar />
       <main className="pt-16">
-        <Hero />
-        <Why />
-        <BroadcastFeature />
-        <UseCases />
-        <N8nSection />
-        <Services />
-        <Industries />
-        <Process />
-        <Results />
-        <Testimonials />
-        <FAQ />
-        <About />
-        <Contact />
+        {showCCTVPage ? (
+          <CCTVSecurityPage onBack={() => setShowCCTVPage(false)} />
+        ) : (
+          <>
+            <Hero />
+            <Why />
+            <BroadcastFeature />
+            <UseCases />
+            <N8nSection />
+            <Services />
+            <Industries />
+            <Process />
+            <Results />
+            <Testimonials />
+            <FAQ />
+            <About />
+            <Contact />
+          </>
+        )}
       </main>
+      {!showCCTVPage && <CCTVSecurityPopup onLearnMore={() => setShowCCTVPage(true)} />}
       <Footer />
     </div>
   )

@@ -14,10 +14,7 @@ export default function Navbar() {
           if (entry.isIntersecting) {
             const id = `#${entry.target.id}`
             setActiveSection(id)
-            // Update URL hash without causing a page jump
-            if (window.location.hash !== id) {
-              window.history.replaceState(null, '', id)
-            }
+            // Disabled updating URL hash on scroll for a cleaner address bar
           }
         })
       },

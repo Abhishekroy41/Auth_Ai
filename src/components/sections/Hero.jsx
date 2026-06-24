@@ -85,7 +85,7 @@ export default function Hero() {
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#0f172a] leading-[1.05] tracking-tight mb-4">
-              Run your business. <span className="text-brand-600">Let {'{ AUTH AI }'}</span> run the internet side of it.
+              Run your business. Let <span className="text-brand-600">AUTH AI</span> run the internet side of it.
             </h1>
 
             <p className="text-slate-500 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
