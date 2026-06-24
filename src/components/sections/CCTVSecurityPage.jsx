@@ -66,7 +66,7 @@ export default function CCTVSecurityPage({ onBack }) {
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-200 to-green-200 rounded-3xl blur-2xl opacity-60 animate-pulse"></div>
             <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-white">
               <img 
-                src="/cctv_images/cctv_poster_1782271891014.png" 
+                src="./cctv_images/cctv_poster_1782271891014.png" 
                 alt="Security Monitoring Center" 
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />
