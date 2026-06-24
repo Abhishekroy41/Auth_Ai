@@ -16,18 +16,35 @@ import About from './components/sections/About'
 import Contact from './components/sections/Contact'
 import CCTVSecurityPopup from './components/CCTVSecurityPopup'
 import CCTVSecurityPage from './components/sections/CCTVSecurityPage'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function App() {
   useScrollReveal()
-  const [showCCTVPage, setShowCCTVPage] = useState(false)
+  const [showCCTVPage, setShowCCTVPage] = useState(window.location.hash === '#security')
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setShowCCTVPage(window.location.hash === '#security');
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const openSecurityPage = () => {
+    window.location.hash = '#security';
+  };
+
+  const closeSecurityPage = () => {
+    window.location.hash = '#home';
+  };
 
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar />
       <main className="pt-16">
         {showCCTVPage ? (
-          <CCTVSecurityPage onBack={() => setShowCCTVPage(false)} />
+          <CCTVSecurityPage onBack={closeSecurityPage} />
         ) : (
           <>
             <Hero />
@@ -46,7 +63,7 @@ export default function App() {
           </>
         )}
       </main>
-      {!showCCTVPage && <CCTVSecurityPopup onLearnMore={() => setShowCCTVPage(true)} />}
+      {!showCCTVPage && <CCTVSecurityPopup onLearnMore={openSecurityPage} />}
       <Footer />
     </div>
   )
